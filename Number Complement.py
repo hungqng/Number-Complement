@@ -15,3 +15,6 @@ class Solution:
 
         # Solution 2
         return num ^ ((1<<num.bit_length())-1)
+
+        # Solution 3
+        return num ^ ((2<<int(math.log(num, 2)))-1)
