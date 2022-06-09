@@ -7,7 +7,11 @@
 
 class Solution:
     def findComplement(self, num: int) -> int:
+        # Flip bit
         i = 1
         while i <= num:
             i = i << 1
         return (i - 1) ^ num
+
+        # Solution 2
+        return num ^ ((1<<num.bit_length())-1)
